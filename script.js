@@ -28,12 +28,22 @@
 // }
 
 
-const evenOrOdd = (number) => {
-    if (number % 2 === 0) {
-        console.log(number, "is an even number")
-    } else {
-        console.log(number, "is an odd number")
-    }
+// const evenOrOdd = (number) => {
+//     if (number % 2 === 0) {
+//         console.log(number, "is an even number")
+//     } else {
+//         console.log(number, "is an odd number")
+//     }
+// }
+
+// evenOrOdd(8)
+
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sum = 0;
+
+for (num of arr) {
+    sum += num;
 }
 
-evenOrOdd(8)
+console.log("The sum of the array is:", sum);
