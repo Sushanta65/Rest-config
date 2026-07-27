@@ -51,17 +51,29 @@
 
 // console.log(reversed)
 
+// const isPalindrome = (str) => {
+//   let reversed = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reversed += str[i];
+//   }
+
+//   const result = {
+//     isPalindrome: str === reversed,
+//     value: reversed,
+//   };
+//   return result;
+// };
+
+// console.log(isPalindrome("Bangladesh"));
+
+
 const isPalindrome = (str) => {
-  let reversed = "";
-  for (i = str.length - 1; i >= 0; i--) {
-    reversed += str[i];
-  }
+    const makePalindrome = str.toLowerCase().split("").reverse("").join("");
 
-  const result = {
-    isPalindrome: str === reversed,
-    value: reversed,
-  };
-  return result;
-};
+    return {
+        isPalindrome: makePalindrome === str.toLowerCase(),
+        value: makePalindrome
+    }
+}
 
-console.log(isPalindrome("Bangladesh"));
+console.log(isPalindrome("Madam"))
