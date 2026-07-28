@@ -88,4 +88,4 @@ const wordCount = (sentence) => {
 }
 
 
-console.log(wordCount("I love Bangladesh"))
+console.log(wordCount("I love Bangladesh "))
