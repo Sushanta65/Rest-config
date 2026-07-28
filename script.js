@@ -67,13 +67,25 @@
 // console.log(isPalindrome("Bangladesh"));
 
 
-const isPalindrome = (str) => {
-    const makePalindrome = str.toLowerCase().split("").reverse("").join("");
+// const isPalindrome = (str) => {
+//     const makePalindrome = str.toLowerCase().split("").reverse().join("");
 
+//     return {
+//         isPalindrome: makePalindrome === str.toLowerCase(),
+//         value: makePalindrome
+//     }
+// }
+
+// console.log(isPalindrome("Madam"))
+
+
+const wordCount = (sentence) => {
+    const word = sentence.split(" ");
     return {
-        isPalindrome: makePalindrome === str.toLowerCase(),
-        value: makePalindrome
+        count: word.length,
+        words: word
     }
 }
 
-console.log(isPalindrome("Madam"))
+
+console.log(wordCount("I love Bangladesh"))
