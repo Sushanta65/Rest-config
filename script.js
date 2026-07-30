@@ -79,13 +79,29 @@
 // console.log(isPalindrome("Madam"))
 
 
-const wordCount = (sentence) => {
-    const word = sentence.split(" ");
-    return {
-        count: word.length,
-        words: word
+// const wordCount = (sentence) => {
+//     const word = sentence.split(" ");
+//     return {
+//         count: word.length,
+//         words: word
+//     }
+// }
+
+
+// console.log(wordCount("I love Bangladesh "))
+
+function matchWinner(teamAGoals, teamBGoals) {
+    // Write your code here...
+
+    if(typeof teamAGoals !== "number" || typeof teamBGoals !== "number"){
+        return "Invalid"
+    }
+
+    if(teamAGoals > teamBGoals){
+        return "Team A Won"
+    } else if(teamBGoals > teamAGoals){
+        return "Team B Won"
+    }else if(teamAGoals === teamBGoals){
+        return "Draw"
     }
 }
-
-
-console.log(wordCount("I love Bangladesh "))
