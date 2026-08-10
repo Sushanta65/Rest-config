@@ -54,33 +54,86 @@ function filterActiveUsers(users) {
   return filteredUsers;
 }
 
-
 // Problem 03
 
 function countHashtags(caption) {
-    // Write your code here…
+  // Write your code here…
 
-    if(typeof caption !== "string"){
-        return "Invalid"
-    }
+  if (typeof caption !== "string") {
+    return "Invalid";
+  }
 
-    const wordCount = caption.split(" ")
+  const wordCount = caption.split(" ");
 
-    const hashTagWords = wordCount.filter(word => word.startsWith("#"))
+  const hashTagWords = wordCount.filter((word) => word.startsWith("#"));
 
-    const hashTagWordsWithoutHash = hashTagWords.map(word => word.slice(1))
+  const hashTagWordsWithoutHash = hashTagWords.map((word) => word.slice(1));
 
-    const longestHashTag = hashTagWordsWithoutHash.reduce((acc, curr) => curr.length > acc.length? curr : acc, "")
+  const longestHashTag = hashTagWordsWithoutHash.reduce(
+    (accumulator, current) =>
+      current.length > accumulator.length ? current : accumulator,
+    "",
+  );
 
-    const result = {
-        hashtagCount: hashTagWordsWithoutHash.length,
-        longestTag: longestHashTag
-    }
+  const result = {
+    hashtagCount: hashTagWordsWithoutHash.length,
+    longestTag: longestHashTag,
+  };
 
-   return result;
-
+  return result;
 }
 
-const caption = "My Name is #Susanto";
+// Problem 04
 
-console.log(countHashtags(caption))
+function bonusScore(scores) {
+  // Write your code here
+
+  if (!Array.isArray(scores) || scores.length === 0) {
+    return "Invalid";
+  }
+
+  const isNumber = scores.every(
+    (score) => typeof score === "number" && !Number.isNaN(score),
+  );
+
+  if (!isNumber) {
+    return "Invalid";
+  }
+
+  const updatedScores = scores.map((score) => score + 10);
+
+  const totalScores = updatedScores.reduce(
+    (accumulator, current) => accumulator + current,
+  );
+
+  return totalScores;
+}
+
+// Problem 05
+
+function generateLeaderboard(students) {
+  if (!Array.isArray(students || student.length === 0)) {
+    return "Invalid";
+  }
+
+  const isValidStudent = students.every(
+    (student) =>
+    typeof student === "object" &&
+    student !== null &&
+    !Array.isArray(student) &&
+    typeof student.name === "string" &&
+    student.name.trim() !== "" &&
+    typeof student.score === "number" &&
+    !Number.isNaN(student.score)
+    );
+
+  if (!isValidStudent) {
+    return "Invalid";
+  }
+
+  const qualified = students.filter((student) => student.score >= 70);
+
+  const names = qualified.map(({ name }) => name.toUpperCase());
+
+  return names.slice(0, 3);
+}
