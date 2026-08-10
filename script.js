@@ -90,6 +90,7 @@
 
 // console.log(wordCount("I love Bangladesh "))
 
+// console.log(wordCount("I love Bangladesh"))
 function matchWinner(teamAGoals, teamBGoals) {
     // Write your code here...
 
