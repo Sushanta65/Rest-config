@@ -79,13 +79,13 @@
 // console.log(isPalindrome("Madam"))
 
 
-const wordCount = (sentence) => {
-    const word = sentence.split(" ");
-    return {
-        count: word.length,
-        words: word
-    }
-}
+// const wordCount = (sentence) => {
+//     const word = sentence.split(" ");
+//     return {
+//         count: word.length,
+//         words: word
+//     }
+// }
 
 
-console.log(wordCount("I love Bangladesh"))
+// console.log(wordCount("I love Bangladesh"))
