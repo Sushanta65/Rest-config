@@ -88,4 +88,21 @@
 // }
 
 
+// console.log(wordCount("I love Bangladesh "))
+
 // console.log(wordCount("I love Bangladesh"))
+function matchWinner(teamAGoals, teamBGoals) {
+    // Write your code here...
+
+    if(typeof teamAGoals !== "number" || typeof teamBGoals !== "number"){
+        return "Invalid"
+    }
+
+    if(teamAGoals > teamBGoals){
+        return "Team A Won"
+    } else if(teamBGoals > teamAGoals){
+        return "Team B Won"
+    }else if(teamAGoals === teamBGoals){
+        return "Draw"
+    }
+}
